@@ -10,13 +10,7 @@ class Combinations < Array
   end
 end
 
-class Company
-  def initialize(nEngineers, fee)
-    @nEngineers = nEngineers
-    @fee = fee
-  end
-  attr_reader :nEngineers, :fee
-end
+Company = Struct.new(:nEngineers, :fee)
 
 companies = []
 nEngineersRequired = gets.to_i
